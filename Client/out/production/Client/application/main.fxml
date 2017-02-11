@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="734.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.mainController">
+  <tabs>
+    <Tab text="Welcome">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="uname" layoutX="80.0" layoutY="43.0" prefHeight="68.0" prefWidth="574.0" text="Welcome">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="name2" layoutX="80.0" layoutY="153.0" prefHeight="54.0" prefWidth="610.0" text="Label">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="email" layoutX="80.0" layoutY="354.0" prefHeight="54.0" prefWidth="610.0" text="Label">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gender" layoutX="80.0" layoutY="250.0" prefHeight="54.0" prefWidth="610.0" text="Label">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="logout" layoutX="567.0" layoutY="62.0" mnemonicParsing="false" onAction="#logoutPressed" text="Logout" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Your Events">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TableView fx:id="table1" layoutX="35.0" layoutY="93.0" prefHeight="553.0" prefWidth="734.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <columns>
+                        <TableColumn fx:id="sno1" prefWidth="44.0" text="S.no" />
+                        <TableColumn fx:id="from1" prefWidth="82.0" text="From" />
+                        <TableColumn fx:id="to1" prefWidth="84.0" text="To" />
+                        <TableColumn fx:id="venue1" prefWidth="75.0" text="Venue" />
+                        <TableColumn fx:id="name1" prefWidth="448.0" text="Event name" />
+                     </columns>
+                  </TableView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Create Event">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="551.0" prefWidth="734.0">
+               <children>
+                  <ComboBox fx:id="combobox" layoutX="59.0" layoutY="132.0" prefHeight="31.0" prefWidth="243.0" promptText="Select Venue" />
+                  <DatePicker fx:id="date" layoutX="336.0" layoutY="132.0" prefHeight="31.0" prefWidth="182.0" />
+                  <Button fx:id="refresh" layoutX="575.0" layoutY="132.0" mnemonicParsing="false" onAction="#refreshPressed" text="Get Slot info" />
+                  <TableView fx:id="table" layoutX="58.0" layoutY="193.0" prefHeight="308.0" prefWidth="619.0">
+                    <columns>
+                      <TableColumn fx:id="sno" prefWidth="44.0" text="S.no" />
+                      <TableColumn fx:id="from" prefWidth="82.0" text="From" />
+                        <TableColumn fx:id="to" prefWidth="84.0" text="To" />
+                        <TableColumn fx:id="name" prefWidth="408.0" text="Event" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="bookevent" layoutX="577.0" layoutY="83.0" mnemonicParsing="false" onAction="#bookEvent" prefHeight="31.0" prefWidth="100.0" text="Book Event" />
+                  <Label fx:id="bookstatus" layoutX="59.0" layoutY="26.0" prefHeight="31.0" prefWidth="619.0" text="Book Events from Here">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textfield" layoutX="59.0" layoutY="83.0" prefHeight="31.0" prefWidth="460.0" promptText="Enter name of event to book" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
