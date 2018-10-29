@@ -70,12 +70,12 @@ public class Main extends Application {
 			received = (Packet)ois.readObject();
 		} catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Problem in receiving Packet");
+			System.out.println("Problem in receiving the Packet");
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
-			System.out.println("Problem in receiving Packet");
+			System.out.println("Problem in receiving the Packet");
 		} catch (Exception e){
-			System.out.println("Problem in receiving Packet");
+			System.out.println("Problem in receiving the Packet");
 		}
 		System.out.println("Packet received");
 		return received;
